@@ -1,6 +1,6 @@
 public class Main {
     public static void main(String[] args) {
-        int n = 2;
+        int n = 0;
         int steps = 1000;
         double[] xValues = new double[80];
         double[] yValues = new double[80];
