@@ -1,14 +1,9 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class BesFunc {
-    private static double besselIntegrand(double x, double tau, int n) { // подынтегральная функция
+    public static double besselIntegrand(double x, double tau, int n) {
         return Math.cos(n * tau - x * Math.sin(tau)) / Math.PI;
     }
 
-    public static double simpson(double x, double a, double b, int n, int steps) { // вычисление интеграла методом Симпсона
-
-
+    public static double simpson(double x, double a, double b, int n, int steps) {
         double h = (b - a) / steps;
         double sum = besselIntegrand(x, a, n) + besselIntegrand(x, b, n);
 
@@ -19,16 +14,4 @@ public class BesFunc {
 
         return sum * h / 3;
     }
-    /*
-
-                          / \
-                         | |
-                         | (о)(о)
-                         С .---_)
-                          | |.___|
-                          | \__/
-                          /_____\
-                         /_____/ \
-                        / \
-     */
 }
